@@ -32,6 +32,27 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
+  const projectCards = document.querySelectorAll(".project-card");
+  projectCards.forEach((card) => {
+    const inner = card.querySelector(".project-inner");
+    const openTrigger = card.querySelector(".project-toggle-front");
+    const closeTrigger = card.querySelector(".project-toggle-back");
+
+    if (openTrigger && inner) {
+      openTrigger.addEventListener("click", (event) => {
+        event.preventDefault();
+        inner.classList.add("flipped");
+      });
+    }
+
+    if (closeTrigger && inner) {
+      closeTrigger.addEventListener("click", (event) => {
+        event.preventDefault();
+        inner.classList.remove("flipped");
+      });
+    }
+  });
+
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }

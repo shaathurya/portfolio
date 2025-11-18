@@ -224,6 +224,83 @@ a:hover {
   flex-direction: column;
   gap: 0.75rem;
 }
+
+.card.project-card {
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  perspective: 1200px;
+}
+
+.project-inner {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  border-radius: 1rem;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: transparent;
+}
+
+.project-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.project-front,
+.project-back {
+  position: absolute;
+  inset: 0;
+  padding: 1.5rem;
+  border-radius: inherit;
+  background-color: var(--card);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  backface-visibility: hidden;
+}
+
+.project-back {
+  transform: rotateY(180deg);
+}
+
+.project-description {
+  color: var(--muted);
+}
+
+.project-toggle {
+  align-self: flex-start;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.project-toggle:hover,
+.project-toggle:focus-visible {
+  background: var(--accent);
+  color: #0b1225;
+  outline: none;
+}
+
+.project-toggle-back {
+  margin-top: auto;
+}
+
+.project-back p {
+  margin: 0;
+}
+
+.projects-grid .project-card:hover .project-inner {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
 .projects-grid .project-card:hover,
 #skills .card:hover,
 .timeline-item:hover {
