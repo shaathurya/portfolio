@@ -318,6 +318,46 @@ a:hover {
   border-color: rgba(255, 255, 255, 0.35);
 }
 
+.project-details {
+  margin-top: 2rem;
+  display: block;
+}
+
+.project-details.hidden {
+  display: none;
+}
+
+.project-details-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.75rem 1.5rem;
+  border-radius: 1rem;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.project-details-content h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.project-details-content p {
+  margin: 0.25rem 0;
+}
+
+.project-details-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .card.project-card {
     height: 360px;

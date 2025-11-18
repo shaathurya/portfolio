@@ -33,19 +33,52 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const projectCards = document.querySelectorAll(".project-card");
+  const detailsPanel = document.getElementById("project-details");
+  const detailsContent = detailsPanel?.querySelector(".project-details-content");
+  const detailsCloseBtn = detailsPanel?.querySelector(".project-details-close");
+
+  const closeDetailsPanel = () => {
+    projectCards.forEach((card) => card.classList.remove("flipped"));
+    if (detailsPanel) {
+      detailsPanel.classList.add("hidden");
+    }
+  };
+
   projectCards.forEach((card) => {
-    const flipButtons = card.querySelectorAll(".flip-btn");
-    flipButtons.forEach((btn) => {
-      btn.addEventListener("click", (event) => {
+    const frontBtn = card.querySelector(".project-toggle-front");
+    const backBtn = card.querySelector(".project-toggle-back");
+    const backBody = card.querySelector(".project-back-body");
+
+    if (frontBtn) {
+      frontBtn.addEventListener("click", (event) => {
         event.preventDefault();
-        if (btn.classList.contains("project-toggle-back")) {
-          card.classList.remove("flipped");
-        } else {
-          card.classList.add("flipped");
+        projectCards.forEach((c) => c.classList.remove("flipped"));
+        card.classList.add("flipped");
+        if (detailsContent && backBody) {
+          detailsContent.innerHTML = backBody.innerHTML;
+        }
+        if (detailsPanel) {
+          detailsPanel.classList.remove("hidden");
         }
       });
-    });
+    }
+
+    if (backBtn) {
+      backBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+        card.classList.remove("flipped");
+        if (detailsPanel) {
+          detailsPanel.classList.add("hidden");
+        }
+      });
+    }
   });
+
+  if (detailsCloseBtn) {
+    detailsCloseBtn.addEventListener("click", () => {
+      closeDetailsPanel();
+    });
+  }
 
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
