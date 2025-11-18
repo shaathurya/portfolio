@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Shaathurya Priyadarshini</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">Shaathurya</div>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero section">
+        <div class="hero-content">
+          <!-- EDIT: Hero title here -->
+          <h1>Shaathurya Priyadarshini</h1>
+          <!-- EDIT: Hero tagline here -->
+          <p>Software engineering student at the University of Western Australia.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <!-- EDIT: CV download link -->
+            <a class="btn secondary" href="Resume_Shaathurya copy.docx" download>Download CV</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="section-heading">
+          <h2>About Me</h2>
+          <p>Software engineering student interested in web, data, and automation.</p>
+        </div>
+        <!-- EDIT: About content -->
+        <p class="section-body">
+          I study Software Engineering (Honours) with a Data Science minor at
+          the University of Western Australia, graduating in 2026. My work spans
+          synthetic population models, education-focused robotics programs,
+          secure systems, and automation projects that streamline operations.
+        </p>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="section-heading">
+          <h2>Skills</h2>
+          <p>Core technologies I work with across coursework and projects.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Languages</h3>
+            <!-- EDIT: Languages details -->
+            <p>Python, Java, C, C++, SQL, HTML, CSS, JavaScript</p>
+          </article>
+          <article class="card">
+            <h3>Tools & Platforms</h3>
+            <!-- EDIT: Tools details -->
+            <p>Git, Docker, Flask, SQLAlchemy, Tailwind CSS, RStudio, UTM</p>
+          </article>
+          <article class="card">
+            <h3>Frameworks & Libraries</h3>
+            <!-- EDIT: Framework details -->
+            <p>Check (C unit tests), Pandas, NumPy, Matplotlib, OWLReady2, JUnit</p>
+          </article>
+          <article class="card">
+            <h3>Data / ML</h3>
+            <!-- EDIT: Data details -->
+            <p>Regression modeling, statistical analysis, hypothesis testing, AI agents</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="section-heading">
+          <h2>Experience</h2>
+          <p>Hands-on roles spanning product builds, teaching, and outreach.</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <!-- EDIT: Experience 1 -->
+            <h3>Software Engineering Intern · Coach.OS</h3>
+            <span>Nov 2024 – Mar 2025</span>
+            <p>
+              Coach.OS develops products for coaching teams. I built a synthetic
+              population model for the Curtin electorate, automated data
+              ingestion, and prototyped LLM prompt strategies that provide more
+              contextual responses for stakeholders.
+            </p>
+          </article>
+          <article class="timeline-item">
+            <!-- EDIT: Experience 2 -->
+            <h3>Coding & Robotics Instructor · Codekids Perth</h3>
+            <span>Jun 2023 – Present</span>
+            <p>
+              Codekids Perth runs extracurricular STEM programs. I teach
+              robotics and coding using VexGo, EV3, Scratch, Minecraft Education
+              and Python, tailor lesson plans for different age groups, and
+              support outreach events at Perth Modern, PLC, and local libraries.
+            </p>
+          </article>
+          <article class="timeline-item">
+            <!-- EDIT: Experience 4 -->
+            <h3>Girls in Engineering Ambassador · UWA</h3>
+            <span>Jun 2024 – Present</span>
+            <p>
+              The ambassador program showcases engineering pathways to school
+              students. I facilitate hands-on activities, speak about student
+              life, and support logistics so workshops run smoothly.
+            </p>
+          </article>
+          <article class="timeline-item">
+            <!-- EDIT: Experience 3 -->
+            <h3>Coding & Robotics Instructor · The Brainery Code SG</h3>
+            <span>Jan 2022 – Dec 2022</span>
+            <p>
+              The Brainery Code delivers robotics programs in Singapore. I ran
+              STEM workshops, mentored students through build challenges, and
+              reinforced computational thinking with practical projects.
+            </p>
+          </article>
+          <article class="timeline-item">
+            <!-- EDIT: Experience 5 -->
+            <h3>Research Assistant · Intriq Journey Singapore</h3>
+            <span>Aug 2022 – Nov 2022</span>
+            <p>
+              Intriq Journey is a bespoke travel company. I automated itinerary
+              generation using structured data, reducing manual preparation and
+              giving consultants faster drafts.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-heading">
+          <h2>Projects</h2>
+          <p>Selected university and personal projects.</p>
+        </div>
+        <div class="card-grid projects-grid">
+          <!-- EDIT: Project 1 details here -->
+          <article class="card project-card">
+            <h3>Mini-Language Transpiler & Compiler</h3>
+            <p>Designed a mini-language that transpiles to C11 with enforced type and memory safety using custom compiler tooling.</p>
+            <a href="#" class="link">View details</a>
+          </article>
+          <!-- EDIT: Project 2 details here -->
+          <article class="card project-card">
+            <h3>Trip Analyzer Web App</h3>
+            <p>Shipped a Flask application with auth, trip sharing, SQLAlchemy, Tailwind CSS, and unit tests to analyze travel data.</p>
+            <a href="#" class="link">View details</a>
+          </article>
+          <!-- EDIT: Project 3 details here -->
+          <article class="card project-card">
+            <h3>Software Testing & QA Suite</h3>
+            <p>Implemented mutation and data-driven tests for a Java system using JUnit, JaCoCo, and CI pipelines to reach high coverage.</p>
+            <a href="#" class="link">View details</a>
+          </article>
+          <!-- EDIT: Project 4 details here -->
+          <article class="card project-card">
+            <h3>Git Ontology Knowledge System</h3>
+            <p>Created an OWLReady2 ontology for Git repositories with scripts that populate data and enable SPARQL-based inference.</p>
+            <a href="#" class="link">View details</a>
+          </article>
+          <!-- EDIT: Project 5 details here -->
+          <article class="card project-card">
+            <h3>Secure Access Control System</h3>
+            <p>Built a role-based access control system in C with the Check framework, input validation, and unit tests following OWASP practices.</p>
+            <a href="#" class="link">View details</a>
+          </article>
+          <!-- EDIT: Project 6 details here -->
+          <article class="card project-card">
+            <h3>Battleship Multiplayer Game</h3>
+            <p>Developed a turn-based Battleship game using Python sockets and Flask for multiplayer networking.</p>
+            <a href="#" class="link">View details</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="section-heading">
+          <h2>Contact</h2>
+          <p>Reach out for project collaborations, internships, or mentoring.</p>
+        </div>
+        <ul class="contact-list">
+          <!-- EDIT: Email -->
+          <li><span>Email:</span> <a href="mailto:shaathurya2712@gmail.com">shaathurya2712@gmail.com</a></li>
+          <!-- EDIT: LinkedIn -->
+          <li><span>LinkedIn:</span> <a href="https://linkedin.com/in/shaathurya-priyadarshini-567b85244" target="_blank" rel="noopener">linkedin.com/in/shaathurya-priyadarshini-567b85244</a></li>
+          <!-- EDIT: GitHub -->
+          <li><span>GitHub:</span> <a href="#" target="_blank" rel="noopener">github.com/shaathurya</a></li>
+        </ul>
+        <div class="cv-note">
+          <p>Need a copy of my résumé?</p>
+          <!-- EDIT: Placeholder CV link -->
+          <a class="btn secondary" href="Resume_Shaathurya copy.docx" download>Download CV</a>
+        </div>
+      </section>
+    </main>
+
+    <button id="backToTop" aria-label="Back to top">↑</button>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <p>© <span id="year"></span> Shaathurya Priyadarshini</p>
+        <p class="footer-links">
+          <a href="mailto:shaathurya2712@gmail.com">Email</a>
+          <span>·</span>
+          <a href="https://linkedin.com/in/shaathurya-priyadarshini-567b85244" target="_blank" rel="noopener">LinkedIn</a>
+          <span>·</span>
+          <a href="https://github.com/shaathurya" target="_blank" rel="noopener">GitHub</a>
+          <span>·</span>
+          <a href="Resume_Shaathurya copy.docx" download>Resume</a>
+        </p>
+        <p class="footer-meta">Built with HTML, CSS &amp; GitHub Pages</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
