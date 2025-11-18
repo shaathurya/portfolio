@@ -34,23 +34,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const projectCards = document.querySelectorAll(".project-card");
   projectCards.forEach((card) => {
-    const inner = card.querySelector(".project-inner");
-    const openTrigger = card.querySelector(".project-toggle-front");
-    const closeTrigger = card.querySelector(".project-toggle-back");
-
-    if (openTrigger && inner) {
-      openTrigger.addEventListener("click", (event) => {
+    const flipButtons = card.querySelectorAll(".flip-btn");
+    flipButtons.forEach((btn) => {
+      btn.addEventListener("click", (event) => {
         event.preventDefault();
-        inner.classList.add("flipped");
+        if (btn.classList.contains("project-toggle-back")) {
+          card.classList.remove("flipped");
+        } else {
+          card.classList.add("flipped");
+        }
       });
-    }
-
-    if (closeTrigger && inner) {
-      closeTrigger.addEventListener("click", (event) => {
-        event.preventDefault();
-        inner.classList.remove("flipped");
-      });
-    }
+    });
   });
 
   if (yearEl) {
