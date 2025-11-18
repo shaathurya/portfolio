@@ -28,7 +28,6 @@ body {
   color: var(--text);
   font-size: 16px;
   line-height: 1.6;
-  scroll-snap-type: y proximity;
 }
 
 img {
@@ -89,12 +88,10 @@ a:hover {
 }
 
 .section {
-  position: static;
   padding: 4rem 5vw;
   background-color: var(--bg-alt);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid rgba(255, 255, 255, 0.02);
-  scroll-snap-align: start;
   margin-bottom: 4rem;
 }
 
@@ -241,13 +238,13 @@ a:hover {
   perspective: 1000px;
   width: 100%;
   position: relative;
-  height: auto;
+  height: 320px;
+  overflow: hidden;
 }
 
 .project-inner {
   position: relative;
   width: 100%;
-  min-height: 260px;
   height: 100%;
   border-radius: 12px;
   transform-style: preserve-3d;
@@ -321,6 +318,11 @@ a:hover {
   border-color: rgba(255, 255, 255, 0.35);
 }
 
+@media (max-width: 768px) {
+  .card.project-card {
+    height: 360px;
+  }
+}
 .projects-grid .project-card:hover,
 #skills .card:hover,
 .timeline-item:hover {
@@ -339,7 +341,8 @@ a:hover {
 }
 
 .contact-section {
-  margin-top: 3rem;
+  position: static;
+  margin-top: 2rem;
   background: linear-gradient(135deg, rgba(96, 165, 250, 0.25), rgba(3, 10, 31, 0.85));
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
