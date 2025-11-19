@@ -96,5 +96,56 @@ document.addEventListener("DOMContentLoaded", () => {
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+
+  // Fade-in on scroll
+  const sections = document.querySelectorAll(".section");
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          sectionObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  sections.forEach((section) => {
+    if (section.id === "home") {
+      section.classList.add("visible");
+    } else {
+      sectionObserver.observe(section);
+    }
+  });
+
+  // Theme toggle
+  const themeToggle = document.querySelector(".theme-toggle");
+  const root = document.documentElement;
+
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "light" || savedTheme === "dark") {
+    root.setAttribute("data-theme", savedTheme);
+    const iconSpan = themeToggle.querySelector(".theme-toggle-icon");
+    if (iconSpan) {
+      iconSpan.textContent = savedTheme === "light" ? "☀️" : "🌙";
+    }
+  } else {
+    root.setAttribute("data-theme", "dark");
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme") === "light" ? "light" : "dark";
+      const next = current === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+
+      const iconSpan = themeToggle.querySelector(".theme-toggle-icon");
+      if (iconSpan) {
+        iconSpan.textContent = next === "light" ? "☀️" : "🌙";
+      }
+    });
+  }
 });
 
