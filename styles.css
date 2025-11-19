@@ -377,6 +377,21 @@ a:hover {
   transform: rotateY(180deg);
 }
 
+.project-video {
+  margin-top: 1rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: rgba(15, 23, 42, 0.35);
+}
+
+.project-video .demo-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.75rem;
+}
+
 .project-description {
   color: var(--muted);
 }
