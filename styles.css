@@ -377,19 +377,36 @@ a:hover {
   transform: rotateY(180deg);
 }
 
+/* Video container inside project popup */
 .project-video {
   margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 420px;        /* max width on desktop */
   border-radius: 0.75rem;
   overflow: hidden;
   border: 1px solid var(--border);
   background: rgba(15, 23, 42, 0.35);
 }
 
+/* Actual video element */
 .project-video .demo-video {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 0.75rem;
+  aspect-ratio: 16 / 9;    /* force horizontal layout */
+}
+
+/* scale nicely on smaller screens */
+@media (max-width: 640px) {
+  .project-video {
+    max-width: 100%;
+  }
+
+  .project-video .demo-video {
+    max-height: 220px;
+  }
 }
 
 .project-description {
